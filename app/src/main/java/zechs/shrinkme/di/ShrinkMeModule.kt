@@ -1,6 +1,7 @@
 package zechs.shrinkme.di
 
 import com.squareup.moshi.Moshi
+import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
@@ -12,7 +13,7 @@ import zechs.shrinkme.data.repository.ShrinkMeRepository
 import zechs.shrinkme.utils.Constants.Companion.SHRINKME_API
 import javax.inject.Singleton
 
-
+@Module
 @InstallIn(SingletonComponent::class)
 object ShrinkMeModule {
 
