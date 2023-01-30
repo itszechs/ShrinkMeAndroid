@@ -4,5 +4,5 @@ import androidx.annotation.Keep
 
 @Keep
 data class ShortenLinkResponse(
-    val messsage: String
+    val message: String
 )
