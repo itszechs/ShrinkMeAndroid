@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import zechs.shrinkme.R
 import zechs.shrinkme.databinding.ActivityMainBinding
+import zechs.shrinkme.utils.Keyboard
 import zechs.shrinkme.utils.copyTextToClipboard
 
 @AndroidEntryPoint
@@ -29,6 +30,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.textField.editText!!.setOnFocusChangeListener { v, hasFocus ->
+            Log.d(TAG, "Text field focus changed: $hasFocus")
+            if (!hasFocus) {
+                Keyboard.hide(v)
+            } else {
+                Keyboard.show(v)
+            }
+        }
 
         binding.btnShorten.setOnClickListener {
             val longUrl = binding.textField.editText!!.text.toString()
