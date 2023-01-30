@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ShrinkMe</string>
+    <string name="shorten_your_link">Shorten your link</string>
+    <string name="shorten">Shorten</string>
 </resources>
