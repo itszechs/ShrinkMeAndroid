@@ -1,5 +1,6 @@
 package zechs.shrinkme.data.remote
 
+import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.POST
 import zechs.shrinkme.data.model.ShortenLinkRequest
@@ -10,6 +11,6 @@ interface ShrinkMeApi {
     @POST("/api/v1/links")
     suspend fun shortenLink(
         @Body shortenLinkRequest: ShortenLinkRequest
-    ): ShortenLinkResponse
+    ): Response<ShortenLinkResponse>
 
 }

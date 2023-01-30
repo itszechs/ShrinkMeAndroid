@@ -1,5 +1,6 @@
 package zechs.shrinkme.data.repository
 
+import retrofit2.Response
 import zechs.shrinkme.data.model.ShortenLinkRequest
 import zechs.shrinkme.data.model.ShortenLinkResponse
 import zechs.shrinkme.data.remote.ShrinkMeApi
@@ -13,7 +14,7 @@ class ShrinkMeRepository @Inject constructor(
 
     suspend fun getShortUrl(
         longUrl: String
-    ): ShortenLinkResponse {
+    ): Response<ShortenLinkResponse> {
         return api.shortenLink(
             ShortenLinkRequest(originalUrl = longUrl)
         )
