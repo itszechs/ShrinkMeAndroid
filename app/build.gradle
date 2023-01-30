@@ -52,6 +52,8 @@ dependencies {
     def moshi_version = "1.13.0"
     def retrofit_version = "2.9.0"
 
+    implementation "androidx.activity:activity-ktx:1.6.1"
+
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
